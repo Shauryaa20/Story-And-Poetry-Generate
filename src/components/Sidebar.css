@@ -1,0 +1,80 @@
+:root {
+    --spacing-small: 10px;
+    --spacing-medium: 20px;
+    --spacing-large: 40px;
+
+    /* Colour Properties */
+    --navbar-color: #e0e0e0;
+    --navbar-background-color: #1a1a1a;
+    --navbar-background-hover-color: #2a2a2a;
+}
+
+.sidebar {
+    /* Block Properties */
+    width: 20vw;
+
+    /* Position Properties */
+    position: absolute;
+    top: 0vh;
+    bottom: 0vh;
+
+    /* Colour Properites */
+    color: var(--navbar-color);
+    background-color: var(--navbar-background-color);
+
+    /* display: none; */
+}
+
+.sidebar-title {
+    /* Box Properties */
+    width: inherit;
+    padding-top: var(--spacing-large);
+    padding-bottom: var(--spacing-large);
+
+    /* Display Properties */
+    display: inline-block;
+
+    /* Font and Text Properties */
+    text-align: center;
+}
+
+.sidebar-title big {
+    /* Text and Font Properties */
+    font-weight: 600;
+    font-size: 1.5em;
+}
+
+.sidebar-story-titles {
+    /* Box Properties */
+    padding: 0;
+    margin: 0;
+
+    /* List Properties */
+    list-style-type: none;
+
+    /* Text Properties */
+    text-align: center;
+}
+
+.sidebar-story-titles li {
+    padding: var(--spacing-medium);
+    transition: background-color 100ms;
+    display: flex;
+}
+
+.sidebar-story-titles li > span {
+    flex: 1 0 0
+}
+
+.sidebar-story-titles li:hover {
+    background-color: var(--navbar-background-hover-color);
+}
+
+.sidebar-story-titles p {
+    display: inline;
+}
+
+.sidebar-story-titles button {
+    color: var(--navbar-color);
+    background-color: inherit;
+}

@@ -1,0 +1,327 @@
+
+.PoetryPage {
+  background-image: url('./assets/background_image.png'); 
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  filter: brightness(0.4);
+} 
+
+  
+html , body{
+    font-family: 'Poppins', sans-serif;
+}
+
+body, h1, h2 {
+    margin: 0;
+    padding: 0;
+}
+.navbar {
+    background: rgba(0, 0, 0, 0.7); 
+    width: 100%;
+    display: flex;
+    justify-content: right;
+    padding: 10px 0;
+    position: relative;
+}
+.navbar-container {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    margin-bottom: 0;
+    position: relative;
+}
+
+
+.logo {
+  border-radius: 25px;
+  margin: 5px 5px;
+}
+
+.navbar-text {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 5vw;
+    color: #F5F5DC;
+    text-shadow: 0 0 16px rgba(0, 0, 0, 0.5), 0 0 10px #fff;
+}
+
+.navbar-p {
+    text-align: center;
+    cursor: pointer;
+    padding: 6px 10px;
+    border-radius: 25px;
+    transition: background-color 0.1s ease;
+}
+
+.navbar-p:hover {
+    background-color: #A8B8E6;
+    color: #2A3D66;
+    font-weight: bold;
+  
+}
+
+.hamburger1, .hamburger2, .hamburger3 {
+  position: absolute;
+  top: 45px;
+  background-color: #2A3D66;
+  color: white;
+  border: 2px solid #A8B8E6;
+  border-radius: 15px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 1);
+  z-index: 1000;
+  font-weight: bold;
+}
+
+.hamburger1 {
+  left: -25px;
+}
+
+.hamburger2 {
+  left: 113px;
+}
+
+.hamburger3 {
+  right: 24px;
+}
+
+.hamburger1, .hamburger2, .hamburger3 p {
+  margin: 5px 0;
+  padding: 5px 15px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+  text-shadow: 0 0 16px rgba(0, 0, 0, 0.5), 0 0 10px #fff;
+}
+
+.heading1, .heading2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* background-color: #8A9AC6; */
+}
+
+.heading1{
+    width: 100%;
+    margin-top: 0;
+    background: rgba(0, 0, 0, 0.7); /* Matching background */
+    display: flex;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    padding: 2.5rem 0; /* Adjust padding to control height */
+}
+
+.heading1-h1 {
+    margin: 0;
+    padding: 0;
+    color: white;
+    text-align: center;
+    font-size: 3.5rem;
+    font-weight: 700;
+    text-shadow: 0 0 15px rgba(0, 0, 0, 0.6), 0 0 22px #fff;
+}
+
+.navbar + .heading1 {
+    margin-top: 0;
+}
+
+.heading2-h2 {
+    font-size: 1.2rem;
+    margin-top: 0.5rem;
+    font-weight: 400;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.main-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* background-color: #8A9AC6; */
+  padding: 10px;
+}
+
+.poems {
+  height: 444px;
+  width: 720px;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-wrap: wrap;
+  /* background-color: #8A9AC6; */
+  gap: 40px;
+}
+
+.poem-type {
+  height: 180px;
+  width: 200px;
+  text-align: center;
+  color: #2A3D66;
+  font-weight: bold;
+  text-shadow: 0 0 16px rgba(0, 0, 0, 0.1), 0 0 20px white;
+  background-color: #c0c0c0;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1), 0 0 20px #2A3D66;
+  /* text-shadow: 0 0 16px rgba(0, 0, 0, 0.1), 0 0 20px #fff; */
+}
+
+.poem-type:hover {
+  background-color: #2A3D66;
+  color: white;
+  font-weight: bolder;
+}
+
+.copyrights {
+  text-align: center;
+  margin-top: 1px;
+  padding: 4px;
+  background-color: #2A3D66;
+  color: white;
+  font-weight: bold;
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  /* background: rgba(0, 0, 0, 0.7); */
+  background: rgba(185, 201, 245, 0.5);
+  backdrop-filter: blur(3px);
+  z-index: 999;
+}
+
+.form-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 10vh;
+  /* background: url('bg_img.png') no-repeat center center/cover; */
+  padding: 20px;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -40%);
+  z-index: 1000;
+}
+
+.form {
+  background: rgba(10, 10, 20, 0.8);
+  padding: 2rem;
+  border-radius: 20px;
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.1), 0 0 40px rgba(0, 0, 0, 0.5);
+  width: 100%;
+  max-width: 400px;
+  text-align: center;
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.genre-title {
+  font-size: 1.5rem;
+  color: #fff;
+  text-align: center;
+  margin-bottom: 1.5rem;
+  text-shadow: 0 0 10px rgba(255, 255, 255, 0.7);
+}
+
+.form-group {
+  display: flex; 
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+
+.form-group label {
+  font-size: 1.1rem;
+  color: #fff;
+  margin-right: 10px;
+  text-shadow: 0 0 5px rgba(255, 255, 255, 0.7);
+}
+
+.form-group input {
+  flex: 1;
+  padding: 0.5rem;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 8px;
+  font-size: 1rem;
+  color: #fff;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.form-group input::placeholder {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.form-group input:focus {
+  border-color: #6c5ce7;
+  outline: none;
+  box-shadow: 0 0 10px rgba(108, 92, 231, 0.5);
+}
+
+.word-limit-options {
+  display: flex;
+  gap: 10px;
+}
+
+.word-limit-btn {
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 10px;
+  padding: 0.5rem 0.7rem;
+  font-size: 1rem;
+  color: #fff;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.word-limit-btn:hover {
+  background-color: rgba(108, 92, 231, 0.5);
+  transform: translateY(-2px);
+  box-shadow: 0 0 10px rgba(108, 92, 231, 0.5);
+}
+
+.word-limit-btn:active {
+  transform: translateY(0);
+  box-shadow: 0 0 5px rgba(108, 92, 231, 0.5);
+}
+
+.word-limit-btn.selected {
+  background-color: #6c5ce7;
+  border-color: #6c5ce7;
+  box-shadow: 0 0 10px rgba(108, 92, 231, 0.5);
+  transform: translateY(-1px);
+}
+
+.submit-btn {
+  background: linear-gradient(135deg, #6c5ce7, #8e44ad);
+  color: white;
+  text-shadow: 0 0 10px rgba(255, 255, 255, 1);
+  border: none;
+  padding: 1rem 2rem;
+  border-radius: 25px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  box-shadow: 0 0 15px rgba(108, 92, 231, 0.5);
+  width: 100%;
+  margin-top: 1rem;
+}
+
+.submit-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 0 25px rgba(108, 92, 231, 0.8);
+  font-size: 1.1rem;
+}
+
+.submit-btn:active {
+  transform: translateY(0px);
+  box-shadow: 0 0 15px rgba(108, 92, 231, 0.5);
+}
