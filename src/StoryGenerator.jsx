@@ -21,7 +21,7 @@ function StoryGenerator() {
 
   return (
     <div className="StoryGenerator">
-      <Sidebar storiesGeneratedHeader={storiesGenerated} />
+      {/* <Sidebar storiesGeneratedHeader={storiesGenerated} /> */}
 
       <div className="main-content">
         <div className="story-heading1">
