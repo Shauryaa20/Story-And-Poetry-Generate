@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import Sidebar from './components/Sidebar';
 import './StoryGenerator.css';
+import { useNavigate } from 'react-router-dom';
 
 function StoryGenerator() {
   const [storiesGenerated, setStoriesGenerated] = useState([
@@ -8,7 +9,17 @@ function StoryGenerator() {
     { id: 1, title: "The Dragon's Quest" },
     { id: 2, title: "Space Adventure" }
   ]);
+  const [genre, setGenre] = useState('');
+  const [char, setChar] = useState('');
+  const [plot, setPlot] = useState(''); 
+  // const [story, setStory] = useState('');
+
+  const navigate = useNavigate();
   
+      const goToStoryGen = () => {
+          navigate("/story-gen", { state: { numCharacters:char, storyPlot:plot, genre } });
+      }
+
   const genreList = [
     "Fantasy",
     "Science Fiction",
@@ -21,7 +32,7 @@ function StoryGenerator() {
 
   return (
     <div className="StoryGenerator">
-      <Sidebar storiesGeneratedHeader={storiesGenerated} />
+      {/* <Sidebar storiesGeneratedHeader={storiesGenerated} /> */}
 
       <div className="main-content">
         <div className="story-heading1">
@@ -33,7 +44,7 @@ function StoryGenerator() {
           <form>
             <div className="form-group">
               <label className="form-label">Genre</label>
-              <select className="form-select">
+              <select onChange={(e) => setGenre(e.target.value)}className="form-select">
                 {genreList.map(genre => (
                   <option key={genre} value={genre}>{genre}</option>
                 ))}
@@ -46,6 +57,7 @@ function StoryGenerator() {
                 type="text"
                 className="form-input"
                 placeholder="Enter number of characters"
+                onChange={(e) => setChar(e.target.value)}
               />
             </div>
 
@@ -54,10 +66,11 @@ function StoryGenerator() {
               <textarea
                 className="form-textarea"
                 placeholder="Describe your story plot..."
+                onChange={(e) => setPlot(e.target.value)}
               />
             </div>
 
-            <button type="submit" className="generate-button">
+            <button type="submit" onClick={goToStoryGen} className="generate-button">
               Generate Story
             </button>
           </form>
