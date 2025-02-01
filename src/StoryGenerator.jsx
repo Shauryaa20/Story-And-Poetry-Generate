@@ -24,7 +24,7 @@ function StoryGenerator() {
       <Sidebar storiesGeneratedHeader={storiesGenerated} />
 
       <div className="main-content">
-        <div className="heading1">
+        <div className="story-heading1">
           <h1 className="heading1-h1">Story Generator</h1>
           {/* <h2 className="heading2-h2">Create your own unique story with AI</h2> */}
         </div>
