@@ -1,61 +1,12 @@
-// import React, { useState, useEffect } from 'react';
-// import { generateStory } from './backend/backend';
-// import { useLocation } from 'react-router-dom';
-
-// const StoryGenerator = () => {
-//   const [story, setStory] = useState('');
-//   const location = useLocation();
-//   const genre = location.state.genre;
-//   const numCharacters = location.state.numCharacters;
-//   const storyPlot = location.state.storyPlot || 'default';
-
-//   useEffect(() => {
-//     generateStory(setStory, genre, numCharacters, storyPlot);
-//   }, []);
-
-//   return (
-//     <div style={{
-//       maxWidth: '800px',
-//       margin: '0 auto',
-//       padding: '20px',
-//     }}>
-//       {story && (
-//         <div style={{
-//           backgroundColor: '#ffffff',
-//           padding: '24px',
-//           borderRadius: '4px',
-//           boxShadow: '0 1px 3px rgba(0, 0, 0, 0.1)',
-//         }}>
-//           <h2 style={{
-//             fontSize: '24px',
-//             fontWeight: 'bold',
-//             marginBottom: '16px',
-//           }}>
-//             Generated Story
-//           </h2>
-//           <div>
-//             <p style={{
-//               whiteSpace: 'pre-wrap',
-//               lineHeight: '1.6',
-//             }}>
-//               {story}
-//             </p>
-//           </div>
-//         </div>
-//       )}
-//     </div>
-//   );
-// };
-
-// export default StoryGenerator;
 
 import React, { useState, useEffect } from 'react';
 import { generateStory } from './backend/backend';
-import { useLocation } from 'react-router-dom';
+import { useLocation, useNavigate } from 'react-router-dom';
 
 const StoryGenerator = () => {
   const [story, setStory] = useState('');
   const location = useLocation();
+  const navigate = useNavigate();
   const genre = location.state.genre;
   const numCharacters = location.state.numCharacters;
   const storyPlot = location.state.storyPlot || 'default';
@@ -69,20 +20,20 @@ const StoryGenerator = () => {
       display: 'flex',
       justifyContent: 'center',
       alignItems: 'center',
-      minHeight: '100vh', // Allows expansion if content grows
-      padding: '40px 20px', // Adds top padding to prevent cutoff
-      boxSizing: 'border-box', // Ensures padding doesn't cause overflow
+      minHeight: '100vh',
+      padding: '40px 20px',
+      boxSizing: 'border-box',
     }}>
       {story && (
         <div style={{
-          background: 'rgba(11, 44, 99, 0.95)', // Dark royal blue
+          background: 'rgba(11, 44, 99, 0.95)',
           backdropFilter: 'blur(4px)',
           padding: '24px',
           borderRadius: '12px',
           boxShadow: '0 4px 10px rgba(0, 0, 0, 0.5)',
           width: '80%',
           maxWidth: '800px',
-          overflow: 'hidden', // Ensures no weird scrolling issues
+          overflow: 'hidden',
         }}>
           <h2 style={{
             fontSize: '26px',
@@ -104,6 +55,30 @@ const StoryGenerator = () => {
             }}>
               {story}
             </p>
+          </div>
+          <div style={{
+            display: 'flex',
+            justifyContent: 'center',
+            marginTop: '20px',
+          }}>
+            <button
+              onClick={() => navigate('/')}
+              style={{
+                padding: '10px 20px',
+                fontSize: '16px',
+                backgroundColor: '#f8f8f8',
+                color: 'rgba(11, 44, 99, 0.95)',
+                border: 'none',
+                borderRadius: '6px',
+                cursor: 'pointer',
+                boxShadow: '0 2px 4px rgba(0, 0, 0, 0.2)',
+                transition: 'transform 0.2s',
+              }}
+              onMouseOver={(e) => e.target.style.transform = 'scale(1.05)'}
+              onMouseOut={(e) => e.target.style.transform = 'scale(1)'}
+            >
+              Back to Home
+            </button>
           </div>
         </div>
       )}

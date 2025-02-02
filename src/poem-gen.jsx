@@ -1,69 +1,12 @@
-// import React, { useState, useEffect } from 'react';
-// import { generatePoem } from './backend/backend';
-// import { useLocation } from 'react-router-dom';
-
-// const PoemGenerator = () => {
-//   const [poem, setPoem] = useState('');
-//   const location = useLocation();
-//   const genre = location.state.genre;
-//   const prompt = location.state.prompt;
-//   const wordLimit = location.state.wordLimit;
-
-//   const generate = async () => {
-//     await generatePoem(setPoem, genre, prompt, wordLimit);
-//   };
-
-//   useEffect(() => {
-//     generate();
-//   }, []);
-
-//   return (
-//     <div style={{
-//       maxWidth: '800px',
-//       margin: '0 auto',
-//       padding: '20px',
-//     }}>
-//       {poem && (
-//         <div style={{
-//           backgroundColor: '#ffffff',
-//           padding: '24px',
-//           borderRadius: '4px',
-//           boxShadow: '0 1px 3px rgba(0, 0, 0, 0.1)',
-//         }}>
-//           <h2 style={{
-//             fontSize: '24px',
-//             fontWeight: 'bold',
-//             marginBottom: '16px',
-//             textAlign: 'center',
-//           }}>
-//             Generated Poem
-//           </h2>
-//           <div style={{
-//             textAlign: 'center',
-//           }}>
-//             {poem.split('\n').map((line, index) => (
-//               <p key={index} style={{
-//                 margin: '8px 0',
-//               }}>
-//                 {line || '\u00A0'}
-//               </p>
-//             ))}
-//           </div>
-//         </div>
-//       )}
-//     </div>
-//   );
-// };
-
-// export default PoemGenerator;
 
 import React, { useState, useEffect } from 'react';
 import { generatePoem } from './backend/backend';
-import { useLocation } from 'react-router-dom';
+import { useLocation, useNavigate } from 'react-router-dom';
 
 const PoemGenerator = () => {
   const [poem, setPoem] = useState('');
   const location = useLocation();
+  const navigate = useNavigate();
   const genre = location.state.genre;
   const prompt = location.state.prompt;
   const wordLimit = location.state.wordLimit;
@@ -86,11 +29,11 @@ const PoemGenerator = () => {
     }}>
       {poem && (
         <div style={{
-          background: 'rgba(11, 44, 99, 0.6)', // Dark royal blue with slight transparency
-          backdropFilter: 'blur(5px)', // Soft blur effect
+          background: 'rgba(11, 44, 99, 0.6)',
+          backdropFilter: 'blur(5px)',
           padding: '24px',
           borderRadius: '12px',
-          boxShadow: '0 4px 15px rgba(0, 0, 0, 0.5)', // Stronger shadow for depth
+          boxShadow: '0 4px 15px rgba(0, 0, 0, 0.5)',
           width: '80%',
           maxWidth: '800px',
         }}>
@@ -100,7 +43,7 @@ const PoemGenerator = () => {
             marginBottom: '16px',
             textAlign: 'center',
             color: 'white',
-            textShadow: '0 0 12px rgba(255, 255, 255, 0.8)', // Strong glow effect
+            textShadow: '0 0 12px rgba(255, 255, 255, 0.8)',
           }}>
             Generated Poem
           </h2>
@@ -111,11 +54,35 @@ const PoemGenerator = () => {
                 fontSize: '18px',
                 lineHeight: '1.5',
                 color: 'white',
-                textShadow: '0 0 10px rgba(255, 255, 255, 0.7)', // Glow effect for poem text
+                textShadow: '0 0 10px rgba(255, 255, 255, 0.7)',
               }}>
                 {line || '\u00A0'}
               </p>
             ))}
+          </div>
+          <div style={{
+            display: 'flex',
+            justifyContent: 'center',
+            marginTop: '20px',
+          }}>
+            <button
+              onClick={() => navigate('/')}
+              style={{
+                padding: '10px 20px',
+                fontSize: '16px',
+                backgroundColor: '#f8f8f8',
+                color: 'rgba(11, 44, 99, 0.95)',
+                border: 'none',
+                borderRadius: '6px',
+                cursor: 'pointer',
+                boxShadow: '0 2px 4px rgba(0, 0, 0, 0.2)',
+                transition: 'transform 0.2s',
+              }}
+              onMouseOver={(e) => e.target.style.transform = 'scale(1.05)'}
+              onMouseOut={(e) => e.target.style.transform = 'scale(1)'}
+            >
+              Back to Home
+            </button>
           </div>
         </div>
       )}
@@ -124,4 +91,3 @@ const PoemGenerator = () => {
 };
 
 export default PoemGenerator;
-
