@@ -8,7 +8,7 @@ function Home() {
   return (
     <div className="App">
       <header className="App-header">
-        <h1>Welcome to Story & Poetry Generator</h1>
+        <h1>Welcome to GenPie</h1>
         <p>Unleash the creativity of AI in generating captivating stories and poetic verses.</p>
       </header>
 
