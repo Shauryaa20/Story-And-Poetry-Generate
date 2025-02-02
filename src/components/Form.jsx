@@ -26,10 +26,10 @@ const Form = ({gen}) => {
                 <div className="form-group">
                     <label>Word Limit: </label>
                     <div className="word-limit-options">
-                        <button className={`word-limit-btn ${wordLimit === 50 ? "selected" : ""}`} onClick={() => handleWordLimitClick(75)}>75</button>
-                        <button className={`word-limit-btn ${wordLimit === 75 ? "selected" : ""}`} onClick={() => handleWordLimitClick(100)}>100</button>
-                        <button className={`word-limit-btn ${wordLimit === 100 ? "selected" : ""}`} onClick={() => handleWordLimitClick(125)}>125</button>
-                        <button className={`word-limit-btn ${wordLimit === 125 ? "selected" : ""}`} onClick={() => handleWordLimitClick(125)}>150</button>
+                        <button className={`word-limit-btn ${wordLimit === 75 ? "selected" : ""}`} onClick={() => handleWordLimitClick(75)}>75</button>
+                        <button className={`word-limit-btn ${wordLimit === 100 ? "selected" : ""}`} onClick={() => handleWordLimitClick(100)}>100</button>
+                        <button className={`word-limit-btn ${wordLimit === 125 ? "selected" : ""}`} onClick={() => handleWordLimitClick(125)}>125</button>
+                        <button className={`word-limit-btn ${wordLimit === 150 ? "selected" : ""}`} onClick={() => handleWordLimitClick(125)}>150</button>
                     </div>
                 </div>       
                 <button onClick={goToPoemGen} className="submit-btn">Generate Poem</button>

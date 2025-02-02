@@ -86,7 +86,7 @@ const PoemGenerator = () => {
     }}>
       {poem && (
         <div style={{
-          background: 'rgba(11, 44, 99, 0.9)', // Dark royal blue with slight transparency
+          background: 'rgba(11, 44, 99, 0.6)', // Dark royal blue with slight transparency
           backdropFilter: 'blur(5px)', // Soft blur effect
           padding: '24px',
           borderRadius: '12px',

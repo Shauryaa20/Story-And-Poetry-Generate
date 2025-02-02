@@ -18,7 +18,6 @@ export const generatePoem = async (setPoem, genre, prompt, wordLimit) => {
 
 export const generateStory = async (setStory, genre, numCharacters, storyPlot) => {
     try {
-      console.log(apiKey)
       const genAI = new GoogleGenerativeAI(apiKey);
       const model = genAI.getGenerativeModel({ model: 'gemini-1.5-flash' });
 
