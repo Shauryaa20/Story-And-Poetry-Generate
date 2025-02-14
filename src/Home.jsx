@@ -8,7 +8,7 @@ function Home() {
   return (
     <div className="App">
       <header className="App-header">
-        <h1>Welcome to GenPie</h1>
+        <h1>Welcome to VerseCraft</h1>
         <p>Unleash the creativity of AI in generating captivating stories and poetic verses.</p>
       </header>
 
@@ -23,8 +23,8 @@ function Home() {
           </div>
 
           <div className="cards">
-            <h2>Generate Poetry</h2>
-            <p>Let the rhythm and beauty of poetry flow! Click below to create a personalized poem.</p>
+            <h2>Generate a Poetry</h2>
+            <p>Let the rhythm and beauty of poetry flow! Click below to create a personalized poetry.</p>
             <button className="card-button" onClick={() => navigate("/poetry-generator")}> 
               Generate Poetry
             </button>

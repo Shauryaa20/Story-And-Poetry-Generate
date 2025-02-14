@@ -54,4 +54,3 @@ function StoryForm ({ genreList }) {
 }
 
 export default StoryForm;
-
