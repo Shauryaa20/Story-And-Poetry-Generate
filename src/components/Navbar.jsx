@@ -112,7 +112,7 @@ const Navbar = (props) => {
                     <p className="navbar-p" onClick={(e) => {e.stopPropagation(); Hamburger("popular")}}>Popular</p>
                     {isClicked === "popular" && (
                         <div className="hamburger1">
-                            <p onClick={() => handlePoemClick("Quick Poem")}>Quick Poem</p>
+                            <p onClick={() => handlePoemClick("Quick Poem")}>Quick Poetry</p>
                             <p onClick={() => handlePoemClick("Free Verse")}>Free Verse</p>
                         </div>
                     )}
@@ -127,7 +127,7 @@ const Navbar = (props) => {
                     <p className="navbar-p" onClick={(e) => {e.stopPropagation(); Hamburger("themes")}}>Themes</p>
                     {isClicked === "themes" && (
                         <div className="hamburger3">
-                            <p onClick={() => handlePoemClick("Love Poem")}>Love Poem</p>
+                            <p onClick={() => handlePoemClick("Love Poem")}>Love Poetry</p>
                         </div>
                     )}
                 </div>   

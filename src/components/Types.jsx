@@ -31,4 +31,3 @@ const Types = (props) => {
 }
 
 export default Types;
-

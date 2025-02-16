@@ -140,7 +140,7 @@ const PoemGenerator = () => {
             color: 'white',
             textShadow: '0 0 12px rgba(255, 255, 255, 0.8)',
           }}>
-            Crafting Your Poem...
+            Crafting Your Poetry...
           </h2>
           <div style={{
             width: '100%',
@@ -186,7 +186,7 @@ const PoemGenerator = () => {
             color: 'white',
             textShadow: '0 0 12px rgba(255, 255, 255, 0.8)',
           }}>
-            Generated Poem
+            Generated Poetry
           </h2>
           <div style={{ textAlign: 'center' }}>
             {poem.split('\n').map((line, index) => (

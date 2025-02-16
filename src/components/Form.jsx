@@ -32,7 +32,7 @@ const Form = ({gen}) => {
                         <button className={`word-limit-btn ${wordLimit === 150 ? "selected" : ""}`} onClick={() => handleWordLimitClick(150)}>150</button>
                     </div>
                 </div>       
-                <button onClick={goToPoemGen} className="submit-btn">Generate Poem</button>
+                <button onClick={goToPoemGen} className="submit-btn">Generate Poetry</button>
             </div>
         </div>
     );

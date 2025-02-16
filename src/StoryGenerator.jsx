@@ -56,7 +56,7 @@ function StoryGenerator() {
               <input
                 type="text"
                 className="form-input"
-                placeholder="Enter number of characters"
+                placeholder="Enter the number of characters"
                 onChange={(e) => setChar(e.target.value)}
               />
             </div>
