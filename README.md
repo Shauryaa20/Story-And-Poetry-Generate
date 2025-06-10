@@ -36,7 +36,7 @@ VerseCraft is an AI-powered web application that enables users to generate origi
 | Layer          | Technology                       |
 |----------------|----------------------------------|
 | **Frontend**   | React.js, Tailwind CSS           |
-| **Backend**    | Flask / FastAPI (if applicable)  |
+| **Backend**    | Flask, Gradio(Model Deployment)  |
 | **AI Model**   | Seq2Seq (Encoder-Decoder architecture) |
 | **Hosting**    | Vercel                           |
 
