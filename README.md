@@ -24,7 +24,7 @@ VerseCraft is an AI-powered web application that enables users to generate origi
   Define the maximum length of the generated story or poem.
 
 - 🤖 **AI Text Generation using Seq2Seq Models**  
-  Utilizes deep learning sequence models to ensure contextual, fluent, and coherent content.
+  Utilizes deep learning sequence models to ensure contextual, fluent and coherent content.
 
 - 💻 **Modern, Responsive UI**  
   Built with React and Tailwind CSS for an intuitive and sleek user experience.
