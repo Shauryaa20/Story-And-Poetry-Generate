@@ -6,7 +6,7 @@ export const generatePoem = async (setPoem, genre, prompt, wordLimit) => {
     try {
       
       const genAI = new GoogleGenerativeAI(apiKey);
-      const model = genAI.getGenerativeModel({ model: 'gemini-1.5-flash' });
+      const model = genAI.getGenerativeModel({ model: 'gemini-2.5-flash' });
 
       const input = `Generate a ${genre} poem with the following prompt: ${prompt}. The poem should be no longer than ${wordLimit} words.`;
       const result = await model.generateContent(input);
@@ -19,7 +19,7 @@ export const generatePoem = async (setPoem, genre, prompt, wordLimit) => {
 export const generateStory = async (setStory, genre, numCharacters, storyPlot) => {
     try {
       const genAI = new GoogleGenerativeAI(apiKey);
-      const model = genAI.getGenerativeModel({ model: 'gemini-1.5-flash' });
+      const model = genAI.getGenerativeModel({ model: 'gemini-2.5-flash' });
 
       const input = `Generate a ${genre} story with ${numCharacters} characters ${storyPlot ? ` with the following plot: ${storyPlot}` : ''}. Make it engaging and well-structured.`;
       const result = await model.generateContent(input);
